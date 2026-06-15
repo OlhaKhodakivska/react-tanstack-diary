@@ -3,15 +3,15 @@ import React from "react";
 export default function About() {
   return (
     <div className="max-w-2xl mx-auto p-6 bg-base-200 rounded-3xl shadow-sm mt-10 border border-base-300">
-      <h2 className="text-3xl font-bold text-neutral mb-4 tracking-tight">About me 🌿</h2>
-      <p className="text-sm opacity-80 leading-relaxed mb-4">
-        Hello! I am a frontend developer who created this cozy space.
-        This project is not just an assignment for presentation, but an attempt to create something beautiful,
-        minimalistic and useful for mental peace.
+      <h2 className="text-3xl font-bold text-neutral mb-4 tracking-tight">About the “Mindful Diary” 🌿</h2>
+      <p className="text-md opacity-90 leading-relaxed mb-4">
+        Your personal space for thoughts and mental peace.
       </p>
-      <p className="text-sm opacity-80 leading-relaxed">
-        These modern technologies are used: <strong>React</strong>, <strong>TanStack Router</strong> for solid navigation,
-        <strong>Tailwind CSS</strong> and <strong>DaisyUI</strong> components for a soft matte design.
+      <p className="text-sm tracking-wide opacity-80 leading-relaxed">
+        This diary is designed for those seeking stillness amidst the daily chaos. It is more than just a digital notebook – it is a safe, minimalist sanctuary where you can organize your thoughts, capture key moments of your day, and spend time alone with yourself.
+      </p>
+      <p className="text-sm tracking-wide opacity-80 leading-relaxed mt-4">
+         The interface is intentionally stripped of unnecessary visual noise, ensuring that nothing distracts you from what truly matters: your inner state.
       </p>
     </div>
   );

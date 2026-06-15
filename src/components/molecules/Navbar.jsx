@@ -1,28 +1,33 @@
-import React from "react";
-import { Link } from "@tanstack/react-router";
+import { Link } from '@tanstack/react-router';
+import { SignedIn, SignedOut, UserButton } from '@clerk/clerk-react';
 
 export default function Navbar() {
   return (
-    <div className="navbar bg-base-100 px-6 py-4 shadow-sm border-b border-base-200">
-      <div className="flex-1">
-        <Link to="/" className="text-xl font-bold tracking-wide text-neutral">
-          MindfulSpace 🌿
-        </Link>
+    <nav className="navbar bg-base-200 px-4 flex justify-between items-center shadow-sm">
+      {/* ЛІВА ЧАСТИНА: Навігаційні посилання */}
+      <div className="flex gap-4">
+        {/* Публічні лінки, які видно завжди й усім */}
+        <Link to="/" className="btn btn-ghost btn-sm">Home</Link>
+        <Link to="/about" className="btn btn-ghost btn-sm">About</Link>
+
+        {/* 📔 Показувати лінк на Щоденник ТІЛЬКИ якщо користувач залогінений (Extension Task 2) */}
+        <SignedIn>
+          <Link to="/diary" className="btn btn-primary btn-sm">My Diary</Link>
+        </SignedIn>
       </div>
-      <div className="flex-none gap-6 text-sm font-medium text-neutral/80">
-        <Link to="/" className="hover:text-primary transition-colors [&.active]:text-primary [&.active]:font-bold px-2">
-          Home
-        </Link>
-        <Link to="/diary" className="hover:text-primary transition-colors [&.active]:text-primary [&.active]:font-bold px-2">
-          Diary
-        </Link>
-        <Link to="/about" className="hover:text-primary transition-colors [&.active]:text-primary [&.active]:font-bold px-2">
-          About
-        </Link>
-        <Link to="/impressum" className="hover:text-primary transition-colors [&.active]:text-primary [&.active]:font-bold px-2">
-          Impressum
-        </Link>
+
+      {/* ПРАВА ЧАСТИНА: Кнопки авторизації / Профіль */}
+      <div className="flex items-center gap-4">
+        {/* Якщо юзер НЕ залогінений — показуємо кнопку Входу */}
+        <SignedOut>
+          <Link to="/login" className="btn btn-outline btn-sm">Sign In</Link>
+        </SignedOut>
+
+        {/* Якщо залогінений — Clerk сам малює матову круглу аватарку з меню виходу (Task 2) */}
+        <SignedIn>
+          <UserButton afterSignOutUrl="/" />
+        </SignedIn>
       </div>
-    </div>
+    </nav>
   );
 }

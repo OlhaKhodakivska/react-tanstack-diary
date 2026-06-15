@@ -10,7 +10,7 @@ export default function Home() {
           <h1 className="text-4xl font-bold text-neutral tracking-tight">
             MindfulSpace 🌿
           </h1>
-          <p className="py-6 text-sm opacity-80 leading-relaxed">
+          <p className="py-6 text-sm tracking-wide opacity-80 leading-relaxed">
             Write down your thoughts, reflect on your mood, and stay in tune with yourself.
           </p>
           <Link to="/diary">
