@@ -1,0 +1,12 @@
+@plugin "daisyui/theme" {
+  name: "mindfulNude";
+
+  --color-primary: #8FA68A;
+  --color-secondary: #E6D36F;
+  --color-accent: #C9CCD3;
+
+  --color-base-100: #E3E3DF;
+  --color-base-200: #D3D3CE;
+
+  --color-neutral: #3F4650;
+}
