@@ -13,7 +13,7 @@ export default function Impressum() {
         </p>
         <p className="font-semibold mt-4">Kontakt:</p>
         <p>E-Mail: olhakhodakivska@gmail.com</p>
-        <p className="mt-4 text-[10px] opacity-50">
+        <p className="mt-4 text-[13px] opacity-60">
           Haftungsausschluss: Dies ist ein reines Ausbildungsprojekt im Rahmen des Web Development Kurses.
         </p>
       </div>

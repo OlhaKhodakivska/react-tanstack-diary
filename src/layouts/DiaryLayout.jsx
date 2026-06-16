@@ -8,7 +8,7 @@ export default function DiaryLayout() {
         <h2 className="text-xl font-bold mb-4 text-primary">My Diary</h2>
         <ul className="menu bg-base-200 w-full rounded-box gap-2">
           <li><Link to="/diary" search={{ search: '' }} activeClass="bg-primary text-white">📝 All notes</Link></li>
-          <li><Link to="/about" activeClass="bg-primary text-white">🙋‍♀️ About me</Link></li>
+          <li><Link to="/about" activeClass="bg-primary text-white">🌿 About MindfulSpace </Link></li>
         </ul>
       </aside>
 

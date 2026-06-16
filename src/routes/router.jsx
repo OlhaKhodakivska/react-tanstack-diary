@@ -9,6 +9,8 @@ import DiaryDetail from '../pages/DiaryDetail';
 import Login from '../pages/Login';
 import SignInPage from './signin.page';
 import SignUpPage from './signup.page';
+import Privacy from "../pages/Privacy";
+
 
 // 1. Створюємо корінь, який буде рендерити головний макет
 const rootRoute = createRootRoute({
@@ -91,6 +93,13 @@ const diaryDetailRoute = createRoute({
   component: DiaryDetail,
 });
 
+// Роут для сторінки політики конфіденційності
+const privacyRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/privacy",
+  component: Privacy,
+});
+
 // Збираємо дерево роутів докупи
 const routeTree = rootRoute.addChildren([
   homeRoute,
@@ -99,6 +108,7 @@ const routeTree = rootRoute.addChildren([
   loginRoute,
   signInRoute,
   signUpRoute,
+  privacyRoute,
   diaryLayoutRoute.addChildren([diaryIndexRoute, diaryDetailRoute]),
 ]);
 

@@ -3,7 +3,7 @@ import React from "react";
 export default function About() {
   return (
     <div className="max-w-2xl mx-auto p-6 bg-base-200 rounded-3xl shadow-sm mt-10 border border-base-300">
-      <h2 className="text-3xl font-bold text-neutral mb-4 tracking-tight">About the “Mindful Diary” 🌿</h2>
+      <h2 className="text-3xl font-bold text-neutral mb-4 tracking-tight">Mindful Diary 🌿</h2>
       <p className="text-md opacity-90 leading-relaxed mb-4">
         Your personal space for thoughts and mental peace.
       </p>
