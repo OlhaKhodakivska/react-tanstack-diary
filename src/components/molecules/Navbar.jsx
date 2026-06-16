@@ -18,9 +18,10 @@ export default function Navbar() {
 
       {/* ПРАВА ЧАСТИНА: Кнопки авторизації / Профіль */}
       <div className="flex items-center gap-4">
-        {/* Якщо юзер НЕ залогінений — показуємо кнопку Входу */}
+        {/* Якщо юзер НЕ залогінений — показуємо кнопки Входу та Реєстрації */}
         <SignedOut>
-          <Link to="/login" className="btn btn-outline btn-sm">Sign In</Link>
+          <Link to="/signin" className="btn btn-outline btn-sm">Sign In</Link>
+          <Link to="/signup" className="btn btn-primary btn-sm">Sign Up</Link>
         </SignedOut>
 
         {/* Якщо залогінений — Clerk сам малює матову круглу аватарку з меню виходу (Task 2) */}
